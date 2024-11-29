@@ -1,0 +1,409 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+}
+
+.sidebar button {
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.sidebar {
+    background-color: #121212;
+    color: white;
+    padding: 20px;
+    width: 250px;
+    height: 100vh;
+    transition: transform 0.4s ease;
+
+}
+
+.sidebar img{
+    width: 100px;
+}
+
+.main-content img{
+    width: 100px;
+}
+.sidebar h2 , .nav-toggle h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: inline-block;
+
+}
+
+h2 em {
+    font-style: normal;
+    color: #FF6000;
+}
+
+.sidebar h4 {
+    font-size: 1.4rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.sidebar a:hover {
+    color: #FF6000;
+    text-decoration: none;
+}
+
+.main-content {
+    padding: 20px;
+    flex: 1;
+    background-color: #1E1E1E;
+}
+
+
+button, a.button-link {
+    display: inline-block;
+    background-color: #FF6000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+
+}
+
+.delete-form {
+    display: inline-block;
+}
+
+button:hover, a.button-link:hover {
+    background-color: #e65c00;
+}
+
+h2 {
+    color: #FF6000;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+table th {
+    background-color: #333;
+}
+
+table td {
+    background-color: #222;
+}
+
+
+.form {
+    padding: 20px;
+    width: 70%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    color: red;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #FF6000;
+    border-radius: 4px;
+    background-color: #1c1c1c;
+    color: white;
+}
+
+.submit-button {
+    background-color: #FF6000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.submit-button:hover {
+    background-color: #ff8c42;
+}
+
+
+.pagination .page-item .page-link {
+    background-color: #333;
+    color: #FFFFFF;
+    border-color: #FF6000;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #FF6000;
+}
+
+.pagination .page-item .page-link:hover {
+    background-color: #1E1E1E;
+    color: #FF6000;
+    border-color: #FF6000;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #1E1E1E;
+}
+
+
+/* Individual Card Styling */
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 20px;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Card styling */
+.card {
+    background-color: #222831; /* Dark background */
+    color: #EEEEEE; /* Light text */
+    flex: 1 1 200px; /* Cards will take up available space */
+    padding: 5px;
+    width: 30%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Icon styling */
+.card-icon {
+    font-size: 4rem;
+    color: #FF6000; /* Accent color */
+    margin-bottom: 10px;
+}
+
+/* Card title styling */
+.card-title {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+/* Card value styling */
+.card-value {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #FF6000
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-5px); /* Slight hover effect */
+}
+
+
+/* Toggle button styling */
+.toggle-button, .toggle-nav {
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: #FF6000;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle h2 {
+    font-size: 22px;
+}
+.toggle-button{
+    display: none;
+}
+.toggle-button:hover, .toggle-nav:hover {
+    background-color: transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Sidebar content on mobile */
+    /* Main content area on mobile */
+    .main-content {
+        margin-right: 0;
+        padding: 15px;
+    }
+
+    .form {
+        width: 100%;
+    }
+    .col-6{
+        width: 100%;
+    }
+    .card-container {
+        flex-direction: column; /* Stack cards on smaller screens */
+        align-items: center; /* Center cards on smaller screens */
+        height: 100vh;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card .icon {
+        font-size: 3rem;
+    }
+
+    .card-title {
+        font-size: 2rem;
+    }
+
+    .card-value {
+        font-size: 5rem;
+    }
+
+    /*table th:nth-child(3), td:nth-child(3) {*/
+    /*    display: none;*/
+    /*}*/
+
+
+    .nav-toggle {
+        display: block;
+    }
+    .toggle-button{
+        display: inline-block;
+        color: #FF6000;
+    }
+    .sidebar {
+        display: none;
+        width: 50%;
+        position: fixed;
+        height: 100vh;
+        z-index: 10;
+    }
+    .sidebar h2{
+        font-size: 1.5rem;
+    }
+    .sidebar.open {
+        display: block;
+        transform: translateX(0);
+    }
+    button, a.button-link{
+        padding: 3px 7px;
+    }
+
+    .action-button{
+        width: 60px;
+        text-align: center;
+    }
+}
+
+
+
+/* Modal Background */
+.modal-content {
+    background-color: #333; /* Dark background to match dashboard */
+    color: white; /* White text */
+    border-radius: 8px; /* Slightly rounded corners */
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Header */
+.modal-header {
+    border-bottom: 1px solid #444; /* Light border between header and body */
+    background-color: #222; /* Darker header background */
+}
+
+.modal-title {
+    color: #FF6000; /* Accent color for the title */
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 20px;
+    background-color: #222; /* Darker background for body */
+    color: #ddd; /* Lighter text color */
+    font-size: 1rem;
+}
+
+/* Modal Footer */
+.modal-footer {
+    background-color: #333; /* Dark footer background */
+    border-top: 1px solid #444; /* Light border at the top */
+}
+
+/* Button Styles */
+.btn-secondary {
+    background-color: #444; /* Dark background for cancel button */
+    color: white;
+    border: 1px solid #555; /* Slightly lighter border */
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #555; /* Lighter background on hover */
+}
+
+.btn-danger {
+    background-color: #FF6000; /* Confirm button matching accent color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #e65c00; /* Darker orange on hover */
+}
